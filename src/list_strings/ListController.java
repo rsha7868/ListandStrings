@@ -20,6 +20,7 @@ public class ListController
 		fillTheList();
 		showTheList();
 	}
+	
 	private void fillTheList()
 	{
 		Kahoot TenWaysToDie = new Kahoot("Ryan", 10);
