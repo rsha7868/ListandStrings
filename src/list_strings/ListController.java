@@ -23,14 +23,32 @@ public class ListController
 	
 	private void fillTheList()
 	{
-		Kahoot TenWaysToDie = new Kahoot("Ryan", 10);
-		myKahoot.add(TenWaysToDie);
+		
+		Kahoot TenWaysToDie = new Kahoot("Ryan", 10, "The Ten Ways to Die");
+		
+		
 	}
 	private void showTheList()
 	{
+		String currentCreator"";
 		for (int index = 0; index < myKahoot.size();index += 1)
 		{
+			currentCreator = myKahoot.get(index);
+			String creator = currentKahoot.getCreator();
 			popup.displayText(myKahoots.get(index));
+			
+			
+			if (currentCreator.equals("nobody"))
+			{
+				for (int loop = 0; loop < 5; loop+= 1)
+				{
+					popup.displayText("wow nobody does a lot");
+				}
+			}
+		}
+		for (int currentLetterIndex = 0; currentLetterIndex < currentCreator.length(); currentLetterIndex +=1)
+		{
+			popup.DisplayText(currentCreator.substring(currentLetterIndex,  currentLetterIndex + 1));
 		}
 	}
 }
