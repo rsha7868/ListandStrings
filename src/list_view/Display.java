@@ -13,7 +13,7 @@ public class Display
 	 * @param textDisplay The text o be displayed.
 	 */
 	
-	public void dsiplayText(String textToDisplay)
+	public void displayText(String textToDisplay)
 	{
 		JOptionPane.showMessageDialog(null, textToDisplay);
 	}
