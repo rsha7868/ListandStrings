@@ -25,7 +25,9 @@ public class ListController
 	{
 		
 		Kahoot TenWaysToDie = new Kahoot("Ryan", 10, "The Ten Ways to Die");
-		
+		Kahoot Hurtme = new Kahoot("Billy", 15, "HurtMe");
+		myKahoots.add(TenWaysToDie);
+		myKahoots.add(Hurtme);
 		
 	}
 	private void showTheList()
@@ -62,11 +64,11 @@ private void changeTheList()
 	popup.displayText("Thee current list size is: " + myKahoots.size());
 	Kahoot removed = myKahoots.remove(3);
 	popup.displayText(" I remove the kahoot by " + removed.getCreator());
-	popup.displayText("The list now has: + mykahoot.size() + "items inside.");
+	popup.displayText("The list now has: + " mykahoots.size() + "items inside.");
 	myKahoot.add(0,remove); 
 	
 	popup.displayText("The list is still: " + myKahoots.size() + " items big.");
-	remove = mykahoot.set(2, new Kahoot());
+	removed = myKahoot.set(2, new Kahoot());
 	popup.dsiplayText("The kahoot by" + removed.getCreator() + " was replaced with on by: " +myKahoot.get(2).getCreator());
 	
 	
