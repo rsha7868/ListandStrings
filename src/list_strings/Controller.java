@@ -2,14 +2,14 @@ package list_strings;
 import java.util.List;
 import java.util.ArrayList;
 import tools.model.Kahoot;
-import tools.view.Display;
+import tools.list_view.Display;
 public class Controller
 {
 	private List<Kahoot> myKahoots;
 	private list_view.Display popup;
 	public Controller()
 	{
-		myKahoot = new ArrayList<Kahoot>();
+		myKahoots = new ArrayList<Kahoot>();
 		popup = new list_view.Display();
 	}
 	
@@ -69,7 +69,7 @@ private void changeTheList()
 	
 	popup.displayText("The list is still: " + myKahoots.size() + " items big.");
 	removed = myKahoot.set(2, new Kahoot());
-	popup.dsiplayText("The kahoot by" + removed.getCreator() + " was replaced with on by: " +myKahoot.get(2).getCreator());
+	popup.dsiplayText("The kahoot by" + removed.getCreator() + " was replaced with on by: " + myKahoots.get(2).getCreator());
 	
 	
 	}
