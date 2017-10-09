@@ -6,7 +6,7 @@ import tools.view.Display;
 public class ListController
 {
 	private List<Kahoot> myKahoots;
-	private Display popup;
+	private list_view.Display popup;
 	public ListController()
 	{
 		myKahoot = new ArrayList<Kahoot>();
@@ -31,10 +31,10 @@ public class ListController
 	private void showTheList()
 	{
 		String currentCreator"";
-		for (int index = 0; index < myKahoot.size();index += 1)
+		for (int index = 0; index < myKahoots.size();index += 1)
 		{
-			currentCreator = myKahoot.get(index);
-			String creator = currentKahoot.getCreator();
+			currentCreator = myKahoots.get(index);
+			String creator = currentKahoots.getCreator();
 			popup.displayText(myKahoots.get(index));
 			
 			
@@ -48,7 +48,7 @@ public class ListController
 		}
 		for (int currentLetterIndex = 0; currentLetterIndex < currentCreator.length(); currentLetterIndex +=1)
 		{
-			popup.DisplayText(currentCreator.substring(currentLetterIndex,  currentLetterIndex + 1));
+			popup.displayText(currentCreator.substring(currentLetterIndex,  currentLetterIndex + 1));
 		}
 		String topic = current.getTopic(0);
 		
@@ -56,5 +56,26 @@ public class ListController
 		{
 			popup.displayText(topic.substring(letter, letter + 1));
 		}
+	}
+private void changeTheList()
+{
+	popup.displayText("Thee current list size is: " + myKahoots.size());
+	Kahoot removed = myKahoots.remove(3);
+	popup.displayText(" I remove the kahoot by " + removed.getCreator());
+	popup.displayText("The list now has: + mykahoot.size() + "items inside.");
+	myKahoot.add(0,remove); 
+	
+	popup.displayText("The list is still: " + myKahoots.size() + " items big.");
+	remove = mykahoot.set(2, new Kahoot());
+	popup.dsiplayText("The kahoot by" + removed.getCreator() + " was replaced with on by: " +myKahoot.get(2).getCreator());
+	
+	
+	}
+private void BurnTheList()
+{
+	popup.displayText("Lets list the world: " + myKahoots.size());
+	Kahoot removed = myKahoots.remove(0);
+	popup.displayText("Waiting is fun..." + removed.getCreator());
+	
 	}
 }
