@@ -24,10 +24,10 @@ public class ListController
 	private void fillTheList()
 	{
 		
-		Kahoot TenWaysToDie = new Kahoot("Ryan", 10, "The Ten Ways to Die");
-		Kahoot Hurtme = new Kahoot("Billy", 15, "HurtMe");
-		myKahoots.add(TenWaysToDie);
-		myKahoots.add(Hurtme);
+		Kahoot tenwaystoDie = new Kahoot("Ryan", 10, "The Ten Ways to Die");
+		Kahoot hurtMe = new Kahoot("Billy", 15, "HurtMe");
+		myKahoots.add(tenwaystoDie);
+		myKahoots.add(hurtMe);
 		
 	}
 	private void showTheList()
