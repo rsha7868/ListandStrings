@@ -3,14 +3,14 @@ import java.util.List;
 import java.util.ArrayList;
 import tools.model.Kahoot;
 import tools.view.Display;
-public class ListController
+public class Controller
 {
 	private List<Kahoot> myKahoots;
 	private list_view.Display popup;
-	public ListController()
+	public Controller()
 	{
 		myKahoot = new ArrayList<Kahoot>();
-		popup = new Display();
+		popup = new list_view.Display();
 	}
 	
 	public void start()
@@ -74,10 +74,19 @@ private void changeTheList()
 	
 	}
 private void BurnTheList()
+
 {
 	popup.displayText("Lets list the world: " + myKahoots.size());
 	Kahoot removed = myKahoots.remove(0);
 	popup.displayText("Waiting is fun..." + removed.getCreator());
 	
+	}
+public list_view.Display getPopup()
+{
+	return popup;
+}
+public ArrayList<Kahoot> getMyKahoot()
+{
+	return (ArrayList<Kahoot>) myKahoots;
 	}
 }
