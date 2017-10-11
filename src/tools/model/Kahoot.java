@@ -1,4 +1,4 @@
-package list_strings;
+package tools.model;
 
 public class Kahoot
 {
@@ -6,6 +6,7 @@ public class Kahoot
 	private int level;
 	private String creator;
 	private boolean isJumble;
+	private String topic;
 	
 	public Kahoot()
 	{
@@ -13,21 +14,32 @@ public class Kahoot
 		this.level = 1;
 		this.creator = "nobody";
 		this.isJumble = false;
+		this.topic = "some topic";
 	}
 	
 	
-	public Kahoot(String creator, int questionCount)
+	public Kahoot(String creator, int questionCount, String topic)
 	{
+		this();
 		this.creator = creator;
 		this.questionCount = questionCount;
+		this.topic = topic;
 	}
 	public String toString()
 	{
 		String description = "This kahoot was made by " + creator + "and has + questionCount" + "questions"; 
 		return description;
 	}
-	public String getcreator()
+	public String getCreator()
 	{
 	return creator;
+	}
+	public int getQuestionCount()
+	{
+		return questionCount;
+	}
+	public String getTopic()
+	{
+		return topic;
 	}
 }

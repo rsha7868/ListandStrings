@@ -1,4 +1,4 @@
-package list_view;
+package tools.view;
 
 import javax.swing.JOptionPane;
 /**
@@ -6,7 +6,7 @@ import javax.swing.JOptionPane;
  * @author rsha7868
  *@version 1.0 03.10.2017
  */
-public class Display
+public class PopupDisplay
 {
 	/**
 	 * Display a popup showing the supplied string to the user.

@@ -1,16 +1,16 @@
-package list_strings;
+package tools.controller;
 import java.util.List;
 import java.util.ArrayList;
 import tools.model.Kahoot;
-import tools.list_view.Display;
+import tools.view.PopupDisplay;
 public class Controller
 {
 	private List<Kahoot> myKahoots;
-	private list_view.Display popup;
+	private PopupDisplay popup;
 	public Controller()
 	{
 		myKahoots = new ArrayList<Kahoot>();
-		popup = new list_view.Display();
+		popup = new PopupDisplay();
 	}
 	
 	public void start()
@@ -32,12 +32,13 @@ public class Controller
 	}
 	private void showTheList()
 	{
-		String currentCreator"";
+		String currentCreator = "";
 		for (int index = 0; index < myKahoots.size();index += 1)
 		{
-			currentCreator = myKahoots.get(index);
-			String creator = currentKahoots.getCreator();
-			popup.displayText(myKahoots.get(index));
+			currentCreator = myKahoots.get(index).getCreator();
+			Kahoot currentKahoot = myKahoots.get(index);
+			String creator = currentKahoot.getCreator();
+			popup.displayText(myKahoots.get(index).toString());
 			
 			
 			if (currentCreator.equals("nobody"))
@@ -52,7 +53,7 @@ public class Controller
 		{
 			popup.displayText(currentCreator.substring(currentLetterIndex,  currentLetterIndex + 1));
 		}
-		String topic = current.getTopic(0);
+		String topic = currentKahoot.getTopic();
 		
 		for (int letter = currentKahoot.getTopic().length() - 1; letter >= 0 ; letter -= 1 )
 		{
@@ -64,8 +65,8 @@ private void changeTheList()
 	popup.displayText("Thee current list size is: " + myKahoots.size());
 	Kahoot removed = myKahoots.remove(3);
 	popup.displayText(" I remove the kahoot by " + removed.getCreator());
-	popup.displayText("The list now has: + " mykahoots.size() + "items inside.");
-	myKahoot.add(0,remove); 
+	popup.displayText("The list now has: + " myKahoots.size() + "items inside.");
+	myKahoots.add(0,removed); 
 	
 	popup.displayText("The list is still: " + myKahoots.size() + " items big.");
 	removed = myKahoot.set(2, new Kahoot());
@@ -89,4 +90,22 @@ public ArrayList<Kahoot> getMyKahoot()
 {
 	return (ArrayList<Kahoot>) myKahoots;
 	}
+public int finndMax(ArrayList<List>myList)
+{
+	int max = 0;
+	
+	for ( int index = 0; index < myList.size(); index ++)
+	{
+		if (myList.get(index).length() < min)
+		{
+			min = myList.get(index).length();
+		}
+		
+	}
+	return min;
 }
+	
+	
+	
+}
+
