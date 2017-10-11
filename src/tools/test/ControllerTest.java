@@ -30,27 +30,27 @@ public class ControllerTest
 	@Test
 	public void testController()
 	{
-		assertNotNull("Popup not initialized.", tested.list_view());
-		assertNotNull("ArrayList of Kahoot not initialized", tested.getMyKahoots());
+		assertNotNull("Popup not initialized.", tested.getPopup());
+		assertNotNull("ArrayList of Kahoot not initialized", tested.GetMyKahoots());
 	}
 
 	@Test
 	public void testStart()
 	{
 		tested.start();
-		assertTrue("ArrayList of Kahoot is too short", tested.getMyKahoots().size() > 3);
+		assertTrue("ArrayList of Kahoot is too short", tested.GetMyKahoots().size() > 3);
 	}
 
 	@Test
 	public void testlist_view()
 	{
-		assertTrue("Popup type is incorrect", tested.getlist_view() instanceof tools.view.PopupDisplay);
+		assertTrue("Popup type is incorrect", tested.getPopup() instanceof PopupDisplay);
 	}
 
 	@Test
 	public void testGetMyKahoots()
 	{
-		assertTrue("ArrayList<Kahoot> expected", tested.getMyKahoots() instanceof ArrayList<?>);
+		assertTrue("ArrayList<Kahoot> expected", tested.GetMyKahoots() instanceof ArrayList<?>);
 
 	}
 
